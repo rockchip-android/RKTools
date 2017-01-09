@@ -1,0 +1,21 @@
+# NAME		Relative path
+#
+#HWDEF		HWDEF
+package-file	package-file
+bootloader	Image-rk3399_box/MiniLoaderAll.bin
+parameter	Image-rk3399_box/parameter.txt
+trust       Image-rk3399_box/trust.img
+uboot       Image-rk3399_box/uboot.img
+misc		Image-rk3399_box/misc.img
+resource	Image-rk3399_box/resource.img
+kernel		Image-rk3399_box/kernel.img
+boot        Image-rk3399_box/boot.img
+recovery	Image-rk3399_box/recovery.img
+system		Image-rk3399_box/system.img
+# 要写入backup分区的文件就是自身（update.img）
+# SELF 是关键字，表示升级文件（update.img）自身
+# 在生成升级文件时，不加入SELF文件的内容，但在头部信息中有记录
+# 在解包升级文件时，不解包SELF文件的内容。
+backup		RESERVED
+#update-script	update-script
+#recover-script	recover-script
